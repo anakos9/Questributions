@@ -3,17 +3,19 @@
   %button.navbar-toggler{"aria-controls" => "navbarColor01", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarColor01", "data-toggle" => "collapse", :type => "button"}
     %span.navbar-toggler-icon
   #navbarColor01.collapse.navbar-collapse
-    %ul.navbar-nav.mr-auto
-      %li.nav-item.active
-        %a.nav-link{:href => "#"}
-          My Team
-          %span.sr-only (current)
-      %li.nav-item
-        %a.nav-link{:href => "#"} Tasks
-      %li.nav-item
-        %a.nav-link{:href => "#"} Projects
-      %li.nav-item
-        %a.nav-link{:href => "#"} Settings
-    %form.form-inline.my-2.my-lg-0
-      %input.form-control.mr-sm-2{:autocomplete => "off", "data-fillr" => "bound", "data-fillr-id" => "1372754662", :placeholder => "Search", :type => "text"}/
-      %button.btn.btn-secondary.my-2.my-sm-0{:type => "submit"} Search
+  .dropdown
+    %button#menu1.btn.btn-primary.dropdown-toggle{"data-toggle" => "dropdown", :type => "button"}
+      %span.caret
+    %ul.dropdown-menu.dropdown-menu-right{"aria-labelledby" => "menu1", :role => "menu"}
+      %li{:role => "presentation"}
+        %a{:href => "#", :role => "menuitem", :tabindex => "-1"} My Characters
+      %li{:role => "presentation"}
+        %a{:href => "#", :role => "menuitem", :tabindex => "-1"} My Projects
+      %li{:role => "presentation"}
+        %a{:href => "#", :role => "menuitem", :tabindex => "-1", :type => "submit"} Login
+
+
+:javascript
+  $(document).ready(function(){
+    $(".dropdown-toggle").dropdown();
+  });
