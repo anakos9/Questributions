@@ -1,0 +1,191 @@
+body {
+  background-color: #fff;
+  color: #333;
+  margin: 33px;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+a {
+  color: #000;
+
+  &:visited {
+    color: #666;
+  }
+
+  &:hover {
+    color: #fff;
+    background-color: #000;
+  }
+}
+
+th {
+  padding-bottom: 5px;
+}
+
+td {
+  padding: 0 5px 7px;
+}
+
+div {
+  &.field, &.actions {
+    margin-bottom: 10px;
+  }
+}
+
+#notice {
+  color: green;
+}
+
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px 7px 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+
+  h2 {
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: -7px -7px 0;
+    background-color: #c00;
+    color: #fff;
+  }
+
+  ul li {
+    font-size: 12px;
+    list-style: square;
+  }
+}
+
+label {
+  display: block;
+}
+// Above are widespread css rules that come out of the box
+
+// My Character Page CSS 
+
+.row.custom-character-row {
+  width: 125% !important;
+}
+
+.main-container {
+  overflow: hidden;
+  height: calc(100vh - 155px);
+  background-color: rgba(242, 242, 242, 1);
+  font-family: Source Sans Pro;
+}
+
+.character-title {
+  margin: 20px; 
+}
+
+.q-nav-bar-title {
+  font-size: 20px;
+
+  a {
+    color: white !important;
+
+    &:hover {
+      text-decoration: none !important;
+      background-color: transparent;
+    }
+  }
+}
+
+.loot-container {
+  margin: 10px;
+}
+
+.panel.loot-details-panel {
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.4);
+  padding: 30px;
+}
+
+.loot-window {
+  padding: 85px;
+}
+
+
+.h2.loot-display-title {
+  font-size: 25px;
+  margin-top: -5px;
+}
+
+.loot-display-body {
+  margin-top: -15px;
+  font-size: 15px;
+  text-align: center !important;
+  padding: 2px;
+}
+
+.user-info-container {
+  margin: 10px;
+}
+
+.panel.user-details-panel {
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.4);
+  padding: 30px;
+}
+
+.user-info-window {
+  padding: 85px;
+}
+
+.h2.user-display-title {
+  font-size: 25px;
+  margin-top: -5px;
+}
+
+.user-display-body {
+  margin-top: -15px;
+  font-size: 15px;
+  text-align: center !important;
+  padding: 2px;
+}
+
+.project-awards-container {
+  margin: 10px;
+}
+
+.panel.project-awards-panel {
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.4);
+  padding: 30px;
+}
+
+.project-awards-window {
+  padding: 85px;
+}
+
+.h2.project-display-title {
+  font-size: 25px;
+  margin-top: -5px;
+}
+
+.project-display-body {
+  margin-top: -15px;
+  font-size: 15px;
+  text-align: center !important;
+  padding: 2px;
+}
