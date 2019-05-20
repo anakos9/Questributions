@@ -84,10 +84,28 @@ label {
 }
 // Above are widespread css rules that come out of the box
 
+.btn.btn-primary.dropdown-toggle.user-menu {
+  a {
+    &:hover {
+      background-color: transparent;
+    }
+    &:visited {
+      background-color: transparent;
+    }
+
+  }
+}
+
+
 // My Character Page CSS 
 
-.row.custom-character-row {
+.row.custom-character-info-row {
   width: 125% !important;
+}
+
+.row.custom-project-list-row {
+  width: 125% !important;
+  margin-top: 45px !important;
 }
 
 .main-container {
@@ -98,19 +116,28 @@ label {
 }
 
 .character-title {
-  margin: 20px; 
+  margin-top: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  margin-left: 35px; 
 }
 
 .q-nav-bar-title {
   font-size: 20px;
+  padding-left: 20px !important;
 
   a {
     color: white !important;
+    font-size: 28px !important;
 
     &:hover {
       text-decoration: none !important;
       background-color: transparent;
     }
+    &:visited {
+      background-color: transparent;
+    }
+
   }
 }
 
@@ -189,3 +216,50 @@ label {
   text-align: center !important;
   padding: 2px;
 }
+
+.project-table-info {
+  font-size: 18px !important;
+}
+
+.project-list-container {
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  margin-left: 40px;
+  font-size: 26px;
+  width: 85%;
+}
+
+.project-details {
+  display: inline-block;
+}
+
+.project-actions {
+  text-decoration: none;
+  color: black !important;
+  float: right !important;
+}
+
+.new-project-link {
+  margin-top: 120px !important;
+}
+
+// CSS Rules for the Project page
+.project-title {
+  margin: 20px; 
+}
+
+
+
+
+
+
+
+
+
+// CSS Rules for the Landing page
+
+
+
+
+// CSS Rules for the Login 

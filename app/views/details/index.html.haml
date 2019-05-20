@@ -2,14 +2,16 @@
   %h1.character-title 
     My Character
   .container
-    .row.custom-character-row
+    .row.custom-character-info-row
       .loot-container
         = render partial: "loot_details"
       .user-info-container
         = render partial: "user_details"
       .project-awards-container
         = render partial: "project_awards"
-
+    .row.custom-project-list-row
+      .project-list-container
+        = render partial: "user_project_list"
 
 -# %table
 -#   %thead

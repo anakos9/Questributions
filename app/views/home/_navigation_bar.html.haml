@@ -5,7 +5,7 @@
     %span.navbar-toggler-icon
   #navbarColor01.collapse.navbar-collapse
   .dropdown
-    %button#menu1.btn.btn-primary.dropdown-toggle{"data-toggle" => "dropdown", :type => "button", style: "font-size: 19px !important;"} 
+    %button#menu1.btn.btn-primary.dropdown-toggle.user-menu{"data-toggle" => "dropdown", :type => "button", style: "font-size: 19px !important;"} 
       - @user = User.first
       = @user.first_name
     %ul.dropdown-menu.dropdown-menu-right{"aria-labelledby" => "menu1", :role => "menu", style: "font-size: 18px !important; padding: 10px !important;"}
@@ -14,8 +14,10 @@
       %li{:role => "presentation"}
         %a{:href => "/projects", :role => "menuitem", :tabindex => "-1"} My Projects
       %li{:role => "presentation"}
-        %a{:href => "#", :role => "menuitem", :tabindex => "-1", :type => "submit"} Login
-
+        - if @user.nil?
+          %a{:href => "/", :role => "menuitem", :tabindex => "-1", :type => "submit"} Login 
+        - else
+          %a{:href => "/", :role => "menuitem", :tabindex => "-1", :type => "submit"} Logout
 
 :javascript
   $(document).ready(function(){
