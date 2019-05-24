@@ -14,7 +14,7 @@
         %a{:href => "/projects", :role => "menuitem", :tabindex => "-1"} My Projects
       %li{:role => "presentation"}
         - if @user.nil?
-          %a{:href => "/", :role => "menuitem", :tabindex => "-1", :type => "submit"} Login 
+          %a{:href => "/users/sign_in", :role => "menuitem", :tabindex => "-1", :type => "submit"} Login 
         - else
           %a{:href => "/", :role => "menuitem", :tabindex => "-1", :type => "submit"} Logout
 
