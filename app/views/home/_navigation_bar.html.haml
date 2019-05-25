@@ -13,10 +13,10 @@
       %li{:role => "presentation"}
         %a{:href => "/projects", :role => "menuitem", :tabindex => "-1"} My Projects
       %li{:role => "presentation"}
-        - if @user.nil?
-          %a{:href => "/users/sign_in", :role => "menuitem", :tabindex => "-1", :type => "submit"} Login 
+        - if current_user
+          = link_to('Logout', destroy_user_session_path, method: :delete)
         - else
-          %a{:href => "/", :role => "menuitem", :tabindex => "-1", :type => "submit"} Logout
+          = link_to('Login', new_user_session_path)
 
 :javascript
   $(document).ready(function(){

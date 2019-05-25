@@ -1,5 +1,9 @@
 class UsersController < ApplicationController
+  before_action :custom_method
   before_action :set_user, only: [:show, :edit, :update, :destroy]
+
+
+
 
   # GET /users
   # GET /users.json
@@ -71,4 +75,15 @@ class UsersController < ApplicationController
     def user_params
       params.require(:user).permit(:first_name, :last_name, :email, :user_name)
     end
+
+  private
+  def custom_method
+    authenticate_user!
+
+    if current_user.admin
+      return
+    else
+      redirect_to root_url # maybe add a message
+    end
+  end
 end
