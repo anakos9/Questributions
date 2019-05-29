@@ -10,7 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2019_05_25_023432) do
+=======
+ActiveRecord::Schema.define(version: 2019_05_25_184934) do
+>>>>>>> a07ec9f77dccffdd82c997b85ad45e769cb129ec
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -47,14 +51,23 @@ ActiveRecord::Schema.define(version: 2019_05_25_023432) do
   create_table "users", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
-    t.string "email"
     t.string "user_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "total_gold"
     t.bigint "project_id"
+    t.string "confirmation_token", limit: 128
+    t.string "remember_token", limit: 128
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.boolean "admin"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["project_id"], name: "index_users_on_project_id"
+    t.index ["remember_token"], name: "index_users_on_remember_token"
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
   add_foreign_key "projects", "users"
