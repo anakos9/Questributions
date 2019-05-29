@@ -1,3 +1,7 @@
 .panel.user-details-panel
     .h2.user-display-title
         USER DETAILS
+    .user-info-full-name
+        Name: #{current_user.first_name + " " + current_user.last_name}
+    .user-info-email
+        Email: #{current_user.email}

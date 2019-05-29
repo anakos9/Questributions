@@ -1,9 +1,10 @@
-- @user = User.find(1)
 .panel.project-awards-panel
     .h2.project-display-title
         PROJECT STATS
     .user-project-count
-        Project Count: #{@user.projects.count}
+        Project Count: #{current_user.projects.count}
+    .user-project-award-count
+        Total Awards: 5
     -#     .panel-body
     -#         .project-display-body
     -#             "PROJECT INFO HERE"
