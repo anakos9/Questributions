@@ -110,9 +110,10 @@ label {
 
 .main-container {
   overflow-y: scroll;
+  overflow-x: hidden !important;
   height: calc(100vh - 155px);
   background-color: rgba(242, 242, 242, 1);
-  font-family: Source Sans Pro;
+  font-family: Montserrat;
 }
 
 .character-title {
@@ -141,6 +142,13 @@ label {
   }
 }
 
+.btn-primary.active, .btn-primary:active, .open>.dropdown-toggle.btn-primary {
+  color: #fff;
+  background-color: none !important;
+  background-image: none !important;
+  border-color: none !important; 
+}
+
 .loot-container {
   margin: 10px;
 }
@@ -148,23 +156,17 @@ label {
 .panel.loot-details-panel {
   box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.4);
   padding: 30px;
+  width: 398px !important;
+  height: 300px !important;
 }
 
 .loot-window {
   padding: 85px;
 }
 
-
 .h2.loot-display-title {
-  font-size: 25px;
+  font-size: 28px !important;
   margin-top: -5px;
-}
-
-.loot-display-body {
-  margin-top: -15px;
-  font-size: 15px;
-  text-align: center !important;
-  padding: 2px;
 }
 
 .user-info-container {
@@ -174,14 +176,12 @@ label {
 .panel.user-details-panel {
   box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.4);
   padding: 30px;
-}
-
-.user-info-window {
-  padding: 85px;
+  width: 398px !important;
+  height: 300px !important;
 }
 
 .h2.user-display-title {
-  font-size: 25px;
+  font-size: 28px !important;
   margin-top: -5px;
 }
 
@@ -199,14 +199,12 @@ label {
 .panel.project-awards-panel {
   box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.4);
   padding: 30px;
-}
-
-.project-awards-window {
-  padding: 85px;
+  width: 398px !important;
+  height: 300px !important;
 }
 
 .h2.project-display-title {
-  font-size: 25px;
+  font-size: 28px !important;
   margin-top: -5px;
 }
 
@@ -226,7 +224,7 @@ label {
   margin-right: 10px;
   margin-bottom: 10px;
   margin-left: 40px;
-  font-size: 26px;
+  font-size: 22px;
   width: 85%;
 }
 
@@ -244,18 +242,21 @@ label {
   margin-top: 120px !important;
 }
 
-// .user-project-row {
-//   margin-bottom: 10px; 
-// }
+.user-project-count {
+  margin-top: 55px;
+  font-size: 22px;
+}
+
 .row .user-project-list-item {
-  margin-bottom: 30px !important;
+  border: solid 1px;
+  padding: 35px;
+  background-color: white;
 }
 
 // CSS Rules for the Project page
 .project-title {
   margin: 20px; 
 }
-
 
 
 
