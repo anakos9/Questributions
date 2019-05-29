@@ -14,7 +14,7 @@
       %li{:role => "presentation"}
         %a{:href => "/details", :role => "menuitem", :tabindex => "-1"} My Character
       %li{:role => "presentation"}
-        %a{:href => "/projects", :role => "menuitem", :tabindex => "-1"} My Projects
+        %a{:href => "/projects/1", :role => "menuitem", :tabindex => "-1"} Main Project
       %li{:role => "presentation"}
         - if current_user
           = link_to('Logout', destroy_user_session_path, method: :delete)
