@@ -281,17 +281,99 @@ label {
 }
 
 // CSS Rules for the Project page
+.main-container-project-page {
+  overflow-y: hidden;
+  overflow-x: hidden !important;
+  height: calc(100vh - 155px);
+  background-color: rgba(242, 242, 242, 1);
+  font-family: Montserrat;
+}
+
 .project-title {
   margin: 20px; 
 }
 
+.panel.task-list-panel {
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.4);
+  padding: 30px;
+  width: 465px !important;
+  height: 670px !important;
+  margin-top: 20px;
+  margin-left: 20px;
+}
 
+.panel.comment-board-panel {
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.4);
+  padding: 30px;
+  width: 465px !important;
+  height: 670px !important;
+  margin-top: 20px;
+  margin-left: 20px;
+}
 
+.panel.team-member-panel {
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.4);
+  padding: 30px;
+  width: 465px !important;
+  height: 670px !important;
+  margin-top: 20px;
+  margin-left: 20px;
+}
 
+.comment-board-title {
+  font-size: 32px !important;
+  text-align: center;
+}
 
+.team-members-title {
+  font-size: 28px !important;
+}
 
+.task-panel-title {
+  font-size: 28px !important;
+}
 
+.create-new-post-button {
+  margin-top: 55px;
+  font-size: 20px;
+  padding: 10px;
+}
 
+.team-member-name {
+  margin-top: 55px;
+  font-size: 26px;
+  margin-left: 25px !important;
+}
+
+.team-member-two {
+  margin-top: 70px;
+  font-size: 26px;
+  margin-left: 25px !important;
+}
+
+.team-member-three {
+  margin-top: 70px;
+  font-size: 26px;
+  margin-left: 25px !important;
+}
+
+.team-member-four {
+  margin-top: 70px;
+  font-size: 26px;
+  margin-left: 25px !important;
+}
+
+.team-member-five {
+  margin-top: 70px;
+  font-size: 26px;
+  margin-left: 25px !important;
+}
+
+.team-member-six {
+  margin-top: 70px;
+  font-size: 26px;
+  margin-left: 25px !important;
+}
 // CSS Rules for the Landing page
 
 
