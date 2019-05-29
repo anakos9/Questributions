@@ -1,6 +1,6 @@
 - @projects = Project.all
 %tbody.table-info
-    - @projects.each do |project|
+    - current_user.projects.each do |project|
         .row.user-project-list-item
             %tr
                 .col-md-6
