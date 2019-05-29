@@ -109,7 +109,7 @@ label {
 }
 
 .main-container {
-  overflow: hidden;
+  overflow-y: scroll;
   height: calc(100vh - 155px);
   background-color: rgba(242, 242, 242, 1);
   font-family: Source Sans Pro;
@@ -242,6 +242,13 @@ label {
 
 .new-project-link {
   margin-top: 120px !important;
+}
+
+// .user-project-row {
+//   margin-bottom: 10px; 
+// }
+.row .user-project-list-item {
+  margin-bottom: 30px !important;
 }
 
 // CSS Rules for the Project page

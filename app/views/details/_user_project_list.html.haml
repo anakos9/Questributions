@@ -1,16 +1,19 @@
 - @projects = Project.all
 %tbody.table-info
     - @projects.each do |project|
-        %tr
-            .project-details
-                %td= project.project_name
-                %td= project.project_description
-                %td= project.member_count
-        %tr
-            .project-actions
-                %td= link_to 'Open', project
-                %td= link_to 'Edit', edit_project_path(project)
-                %td= link_to 'Delete', project, method: :delete, data: { confirm: 'Are you sure?' }
+        .row.user-project-list-item
+            %tr
+                .col-md-6
+                    .project-details
+                        %td= project.project_name
+                        %td= project.project_description
+                        %td= project.member_count
+            %tr
+                .col-md-6
+                    .project-actions
+                        %td= link_to 'Open', project
+                        %td= link_to 'Edit', edit_project_path(project)
+                        %td= link_to 'Delete', project, method: :delete, data: { confirm: 'Are you sure?' }
 
 .new-project-link
     %br/

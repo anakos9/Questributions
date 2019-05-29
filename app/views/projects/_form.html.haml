@@ -1,0 +1,24 @@
+= form_with(model: project, local: true) do |form|
+  - if project.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(project.errors.count, "error")
+        prohibited this project from being saved:
+      %ul
+        - project.errors.full_messages.each do |message|
+          %li= message
+  .field
+    = form.label :project_name
+    = form.text_field :project_name
+  .field
+    = form.label :project_description
+    = form.text_field :project_description
+  .field
+    = form.label :member_count
+    = form.number_field :member_count
+  .field 
+    = form.label :user_id
+    = form.number_field :user_id
+  .actions
+    = form.submit
+

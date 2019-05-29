@@ -1,0 +1,13 @@
+%p#notice= notice
+%p
+  %strong Project name:
+  = @project.project_name
+%p
+  %strong Project description:
+  = @project.project_description
+%p
+  %strong Member count:
+  = @project.member_count
+= link_to 'Edit', edit_project_path(@project)
+|
+= link_to 'Back', details_path
