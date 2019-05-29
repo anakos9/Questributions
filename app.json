@@ -1,0 +1,16 @@
+{
+  "addons": [
+
+  ],
+  "buildpacks": [
+
+  ],
+  "env": {
+  },
+  "formation": {
+  },
+  "name": "Questributions",
+  "scripts": {
+  },
+  "stack": "heroku-18"
+}
