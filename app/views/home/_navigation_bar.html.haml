@@ -6,7 +6,10 @@
   #navbarColor01.collapse.navbar-collapse
   .dropdown
     %button#menu1.btn.btn-primary.user-menu{"data-toggle" => "dropdown", :type => "button", style: "font-size: 19px !important;"} 
-      #{current_user.first_name}
+      - if current_user
+        #{current_user.first_name}
+      - else
+        Please login
     %ul.dropdown-menu.dropdown-menu-right{"aria-labelledby" => "menu1", :role => "menu", style: "font-size: 18px !important; padding: 10px !important;"} 
       %li{:role => "presentation"}
         %a{:href => "/details", :role => "menuitem", :tabindex => "-1"} My Character
