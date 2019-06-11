@@ -4,7 +4,11 @@
     .user-project-count
         Project Count: #{current_user.projects.count}
     .user-project-award-count
-        Total Awards: 5
+        Champion: #{current_user.champion}
+        .br
+        Most Communicative: #{current_user.most_communicative}
+        .br
+        Best Leadership: #{current_user.best_leadership}
     -#     .panel-body
     -#         .project-display-body
     -#             "PROJECT INFO HERE"
