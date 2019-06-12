@@ -232,6 +232,31 @@ label {
   display: inline-block;
 }
 
+.task-info-body {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  overflow-y: scroll;
+}
+
+.task-name {
+  margin-top: 15px;
+  font-size: 22px !important;
+}
+
+.task-desc {
+  margin-top: 10px;
+  font-size: 17px !important;
+  margin-left: 15px;
+  width: 70%;
+}
+
+.task-gold-count {
+  margin-left: 15px;
+  font-size: 17px !important;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
 .project-actions {
   text-decoration: none;
   color: black !important;
@@ -239,7 +264,8 @@ label {
 }
 
 .new-project-link {
-  margin-top: 120px !important;
+  margin-top: 30px !important;
+  margin-bottom: 60px;
 }
 
 .user-project-count {
@@ -256,6 +282,7 @@ label {
 .user-project-award-count {
   margin-top: 35px;
   font-size: 24px;
+  line-height: 35px !important;
 }
 
 .user-info-full-name {
@@ -331,6 +358,7 @@ label {
 
 .task-panel-title {
   font-size: 28px !important;
+  margin-bottom: 10px;
 }
 
 .create-new-post-button {

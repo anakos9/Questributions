@@ -6,5 +6,10 @@ class User < ApplicationRecord
 
     has_many :tasks
     has_many :projects
-
+    
+    def full_name
+      full_name = self.first_name + " " + self.last_name
+      return full_name
+    end
+    
 end

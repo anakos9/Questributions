@@ -1,18 +1,19 @@
+- @project = Project.first
 .panel.task-list-panel
     .h2.task-panel-title
         TASKS:
-    .user-loot-list
-        Group Presentation
-        .loot-count{style: "margin-left: 20px;"}
-            +80 gold
-        .br
-        Develop Documentation
-        .loot-count{style: "margin-left: 20px;"}
-            +50 gold
-        .br
-        Submit Code for Review
-        .loot-count{style: "margin-left: 20px;"}
-            +25 gold
+    .task-info-body
+        - @project.tasks.each do |task|
+            .task-name
+                = task.task_name
+            .br
+            .li.task-desc
+                = "- #{task.task_description}"
+            .br
+            .task-gold-count
+                = "+ #{task.gold_count} Gold"
+            .br
+
     %button.create-new-post-button{style: "margin-top: 295px;"}
-        Add Task
+        = link_to 'New Task', new_task_path
 
