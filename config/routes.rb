@@ -1,9 +1,12 @@
 Rails.application.routes.draw do
+  resources :posts
   devise_for :users
   resources :details
   resources :tasks
   resources :projects
   resources :users
+
+  post "/tasks/id" => "tasks#edit", as: :edit
 
   devise_scope :user do
     authenticated :user do

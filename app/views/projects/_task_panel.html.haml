@@ -1,19 +1,25 @@
-- @project = Project.first
 .panel.task-list-panel
     .h2.task-panel-title
         TASKS:
     .task-info-body
         - @project.tasks.each do |task|
-            .task-name
-                = task.task_name
-            .br
-            .li.task-desc
-                = "- #{task.task_description}"
-            .br
-            .task-gold-count
-                = "+ #{task.gold_count} Gold"
-            .br
-
-    %button.create-new-post-button{style: "margin-top: 295px;"}
+            .row
+                .col-md-8
+                    .task-name
+                        = "- #{task.task_name}"
+                    .br
+                    .li.task-desc
+                        = "- #{task.task_description}"
+                    .br
+                    .task-gold-count
+                        = "+ #{task.gold_count} Gold"
+                    .br
+                .col-md-4{style: "margin-top: 55px !important;"}
+                    - if task.status != "complete"
+                        = link_to 'Mark Complete', edit_task_path, data: { confirm: 'Are you sure?' }  
+                    - else
+                        Completed
+    %button.create-new-post-button
         = link_to 'New Task', new_task_path
 
+    
