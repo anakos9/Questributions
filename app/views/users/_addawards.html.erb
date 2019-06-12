@@ -1,0 +1,22 @@
+<%= form_with(model: user, local: true) do |form| %>
+  
+
+  <div class="field">
+    <%= form.label :most_communicative %>
+    <%= form.text_field :most_communicative %>
+  </div>
+
+  <div class="field">
+    <%= form.label :champion %>
+    <%= form.text_field :champion %>
+  </div>
+
+  <div class="field">
+    <%= form.label :best_leadership %>
+    <%= form.text_field :champion %>
+  </div>
+
+  <div class="actions">
+  <%= link_to 'Submit', details_path, class: 'button alt' %>
+  </div>
+<% end %>

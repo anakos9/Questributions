@@ -11,6 +11,10 @@ class UsersController < ApplicationController
     @users = User.all
   end
 
+ def awardindex
+    @users = User.all
+ end
+
   # GET /users/1
   # GET /users/1.json
   def show
@@ -23,6 +27,9 @@ class UsersController < ApplicationController
 
   # GET /users/1/edit
   def edit
+  end
+
+  def editaward
   end
 
   # POST /users
@@ -83,7 +90,7 @@ class UsersController < ApplicationController
     if current_user.admin
       return
     else
-      redirect_to root_url # maybe add a message
+      redirect_to '/users/sign_in' # maybe add a message
     end
   end
 end

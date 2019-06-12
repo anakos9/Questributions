@@ -3,7 +3,10 @@ Rails.application.routes.draw do
   resources :details
   resources :tasks
   resources :projects
+  get "users/awards" => 'users#awardindex'
+  get "users/editaward" => 'users#editaward'
   resources :users
+  
 
   devise_scope :user do
     authenticated :user do
