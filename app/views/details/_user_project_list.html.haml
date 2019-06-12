@@ -1,19 +1,24 @@
-- @projects = Project.all
 %tbody.table-info
     - current_user.projects.each do |project|
         .row.user-project-list-item
             %tr
                 .col-md-6
                     .project-details
-                        %td= project.project_name
-                        %td= project.project_description
-                        %td.member-count= project.member_count
+                        .project-title
+                            %td= "Name: #{project.project_name}"
+                        .br
+                        .project-desc
+                            %td= "Description: #{project.project_description}"
+                        .br
+                        .project-member-count
+                            %td.member-count= "Members: #{project.member_count}"
             %tr
                 .col-md-6
                     .project-actions
-                        %td= link_to 'View', project
-                        %td= link_to 'Edit', edit_project_path(project)
-                        %td= link_to 'Delete', project, method: :delete, data: { confirm: 'Are you sure?' }
+                        %td= link_to 'View', project, locals: {project: @project}
+                        - unless !current_user.admin? || current_user.role == "faculty"
+                            %td= link_to 'Edit', edit_project_path(project)
+                            %td= link_to 'Delete', project, method: :delete, data: { confirm: 'Are you sure?' }
 
 - if current_user.admin?
     .new-project-link

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :posts
   devise_for :users
   resources :details
   resources :tasks
@@ -7,6 +8,8 @@ Rails.application.routes.draw do
   get "users/editaward" => 'users#editaward'
   resources :users
   
+
+  post "/tasks/id" => "tasks#edit", as: :edit
 
   devise_scope :user do
     authenticated :user do

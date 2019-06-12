@@ -10,32 +10,45 @@
       </ul>
     </div>
   <% end %>
+  <% if current_user.admin? || current_user.role == "faculty" %>
+    <div class="field">
+      <%= form.label :task_name %>
+      <%= form.text_field :task_name %>
+    </div>
 
-  <div class="field">
-    <%= form.label :task_name %>
-    <%= form.text_field :task_name %>
-  </div>
+    <div class="field">
+      <%= form.label :task_description %>
+      <%= form.text_field :task_description %>
+    </div>
 
-  <div class="field">
-    <%= form.label :task_description %>
-    <%= form.text_field :task_description %>
-  </div>
+    <div class="field">
+      <%= form.label :user_id %>
+      <%= form.text_field :user_id %>
+    </div>
 
-  <div class="field">
-    <%= form.label :user_id %>
-    <%= form.text_field :user_id %>
-  </div>
+    <div class="field">
+      <%= form.label :project_id %>
+      <%= form.text_field :project_id %>
+    </div>
+    
+    <div class="field">
+      <%= form.label :gold_count %>
+      <%= form.number_field :gold_count %>
+    </div>
 
-  <div class="field">
-    <%= form.label :project_id %>
-    <%= form.text_field :project_id %>
-  </div>
-  
-  <div class="field">
-    <%= form.label :gold_count %>
-    <%= form.number_field :gold_count %>
-  </div>
+    <div class="field">
+      <%= form.label :status %>
+      <%= form.text_field :status %>
+    </div>
 
+  <% else %>
+
+    <div class="field">
+      <%= form.label :status %>
+      <%= form.text_field :status %>
+    </div>
+
+  <% end %>
   <div class="actions">
     <%= form.submit %>
   </div>

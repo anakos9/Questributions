@@ -1,0 +1,41 @@
+= form_with(model: user, local: true) do |form|
+  - if user.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(user.errors.count, "error")
+        prohibited this user from being saved:
+      %ul
+        - user.errors.full_messages.each do |message|
+          %li= message
+  .field
+    = form.label :first_name
+    = form.text_field :first_name
+  .field
+    = form.label :last_name
+    = form.text_field :last_name
+  .field
+    = form.label :email
+    = form.text_field :email
+  .field
+    = form.label :user_name
+    = form.text_field :user_name
+  .field.check
+    Add to project
+    \#{form.check_box :user_name}
+  #project_addition.field
+    Confirm User ID
+    .br
+    \#{form.text_field :user_id}
+  #project_id_field.field
+    Confirm Project ID
+    .br
+    \#{form.text_field :project_id}
+  .actions
+    = form.submit
+
+:javascript
+  $('.field.check').click(function() {
+    $('#project_addition').toggle()
+    $('#project_id_field').toggle()
+  })
+
