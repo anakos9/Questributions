@@ -5,3 +5,6 @@
         Name: #{current_user.first_name + " " + current_user.last_name}
     .user-info-email
         Email: #{current_user.email}
+    - unless current_user.total_gold.nil?
+        .user-info-email
+            Total Gold: #{current_user.total_gold}
