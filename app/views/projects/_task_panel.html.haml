@@ -1,19 +1,24 @@
-- @project = Project.first
+//- @project = Project.first
 .panel.task-list-panel
     .h2.task-panel-title
         TASKS:
     .task-info-body
         - @project.tasks.each do |task|
-            .task-name
-                = task.task_name
-            .br
-            .li.task-desc
-                = "- #{task.task_description}"
-            .br
-            .task-gold-count
-                = "+ #{task.gold_count} Gold"
-            .br
+            .row
+                .col-md-10
+                    .task-name
+                        = "- #{task.task_name}"
+                    .br
+                    .li.task-desc
+                        = "- #{task.task_description}"
+                    .br
+                    .task-gold-count
+                        = "+ #{task.gold_count} Gold"
+                    .br
+                .col-md-2{style: "margin-top: 55px !important;"}  
+                    %input{:id => "task_status", :name => "task_complete", :type => "checkbox", :value => "completed"}
 
     %button.create-new-post-button
         = link_to 'New Task', new_task_path
 
+:javascript

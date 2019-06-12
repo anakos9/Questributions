@@ -11,7 +11,7 @@
             %tr
                 .col-md-6
                     .project-actions
-                        %td= link_to 'View', project
+                        %td= link_to 'View', project, locals: {project: @project}
                         %td= link_to 'Edit', edit_project_path(project)
                         %td= link_to 'Delete', project, method: :delete, data: { confirm: 'Are you sure?' }
 

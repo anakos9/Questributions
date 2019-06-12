@@ -236,6 +236,12 @@ label {
   border-top: 1px solid black;
   border-bottom: 1px solid black;
   overflow-y: scroll;
+  overflow-x: hidden;
+  height: 70%;
+}
+
+.group-member-body {
+  
 }
 
 .task-name {
@@ -353,7 +359,8 @@ label {
 }
 
 .team-members-title {
-  font-size: 28px !important;
+  font-size: 32px !important;
+  text-align: center;
 }
 
 .task-panel-title {
@@ -374,35 +381,10 @@ label {
   margin-left: 25px !important;
 }
 
-.team-member-two {
-  margin-top: 70px;
-  font-size: 26px;
-  margin-left: 25px !important;
+#project_addition {
+  display: none;
 }
 
-.team-member-three {
-  margin-top: 70px;
-  font-size: 26px;
-  margin-left: 25px !important;
-}
-
-.team-member-four {
-  margin-top: 70px;
-  font-size: 26px;
-  margin-left: 25px !important;
-}
-
-.team-member-five {
-  margin-top: 70px;
-  font-size: 26px;
-  margin-left: 25px !important;
-}
-
-.team-member-six {
-  margin-top: 70px;
-  font-size: 26px;
-  margin-left: 25px !important;
-}
 // CSS Rules for the Landing page
 
 
