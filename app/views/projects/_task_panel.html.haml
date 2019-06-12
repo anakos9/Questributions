@@ -19,7 +19,12 @@
                         = link_to 'Mark Complete', edit_task_path, data: { confirm: 'Are you sure?' }  
                     - else
                         Completed
-    %button.create-new-post-button
-        = link_to 'New Task', new_task_path
+    .row
+        .col-md-6
+            %button.create-new-post-button
+                = link_to 'New Task', new_task_path
+        .col-md-6
+            %button.create-new-post-button
+                = link_to 'Leave Feedback', "/users/awards"
 
     
