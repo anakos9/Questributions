@@ -232,6 +232,18 @@ label {
   display: inline-block;
 }
 
+.project-title {
+   
+}
+
+.project-member-count {
+  margin-top: 15px;
+}
+
+.project-desc {
+  margin-top: 15px;
+}
+
 .task-info-body {
   border-top: 1px solid black;
   border-bottom: 1px solid black;
@@ -240,8 +252,17 @@ label {
   height: 70%;
 }
 
-.group-member-body {
-  
+.project_posts {
+  font-size: 20px;
+  margin-top: 15px;
+}
+
+.project_comments {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 80%;
 }
 
 .task-name {
@@ -322,10 +343,6 @@ label {
   font-family: Montserrat;
 }
 
-.project-title {
-  margin: 20px; 
-}
-
 .panel.task-list-panel {
   box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.4);
   padding: 30px;
@@ -382,6 +399,10 @@ label {
 }
 
 #project_addition {
+  display: none;
+}
+
+#project_id_field {
   display: none;
 }
 

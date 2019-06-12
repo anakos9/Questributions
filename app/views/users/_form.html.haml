@@ -19,14 +19,23 @@
   .field
     = form.label :user_name
     = form.text_field :user_name
-  .field
+  .field.check
     Add to project
     \#{form.check_box :user_name}
   #project_addition.field
-    Add to project
-    \#{form.check_box :user_name}
+    Confirm User ID
+    .br
+    \#{form.text_field :user_id}
+  #project_id_field.field
+    Confirm Project ID
+    .br
+    \#{form.text_field :project_id}
   .actions
     = form.submit
 
+:javascript
+  $('.field.check').click(function() {
+    $('#project_addition').toggle()
+    $('#project_id_field').toggle()
+  })
 
-javascript:

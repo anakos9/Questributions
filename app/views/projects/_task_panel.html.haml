@@ -1,11 +1,10 @@
-//- @project = Project.first
 .panel.task-list-panel
     .h2.task-panel-title
         TASKS:
     .task-info-body
         - @project.tasks.each do |task|
             .row
-                .col-md-10
+                .col-md-8
                     .task-name
                         = "- #{task.task_name}"
                     .br
@@ -15,10 +14,12 @@
                     .task-gold-count
                         = "+ #{task.gold_count} Gold"
                     .br
-                .col-md-2{style: "margin-top: 55px !important;"}  
-                    %input{:id => "task_status", :name => "task_complete", :type => "checkbox", :value => "completed"}
-
+                .col-md-4{style: "margin-top: 55px !important;"}
+                    - if task.status != "complete"
+                        = link_to 'Mark Complete', edit_task_path, data: { confirm: 'Are you sure?' }  
+                    - else
+                        Completed
     %button.create-new-post-button
         = link_to 'New Task', new_task_path
 
-:javascript
+    

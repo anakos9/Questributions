@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   resources :projects
   resources :users
 
+  post "/tasks/id" => "tasks#edit", as: :edit
+
   devise_scope :user do
     authenticated :user do
       root 'details#index', as: :authenticated_root
