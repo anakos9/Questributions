@@ -253,8 +253,9 @@ label {
 }
 
 .project_posts {
-  font-size: 20px;
+  font-size: 22px;
   margin-top: 15px;
+  line-height: 30px;
 }
 
 .project_comments {
@@ -262,7 +263,14 @@ label {
   border-bottom: 1px solid black;
   overflow-y: scroll;
   overflow-x: hidden;
-  height: 80%;
+  height: 70%;
+}
+.team-member-body {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  height: 70%;
 }
 
 .task-name {

@@ -1,11 +1,19 @@
 .panel.loot-details-panel
-    .h2.loot-display-title
-        LOOT BREAKDOWN
-    .users-top-loot
-        Top Loot
-    .user-loot-list
-        Master Sword
-        .br
-        Crown of Roses
-        .br
-        Ancient Chainmail
+    - if current_user.admin?
+        .h2.project-display-title
+            Admin Actions
+        .user-project-award-count
+            = link_to 'All Users', "/users"
+            .br
+            = link_to 'All Tasks', "/tasks"
+    - else
+        .h2.loot-display-title
+            LOOT BREAKDOWN
+        .users-top-loot
+            Top Loot
+        .user-loot-list
+            Master Sword
+            .br
+            Crown of Roses
+            .br
+            Ancient Chainmail
